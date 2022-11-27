@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.button {
+  background-color: #181a94;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button {
+    background-color: #f2f2f2;
+    color: #888888;
+    display: inline-block;
+    border: solid 3px #cccccc;
+    vertical-align: middle;
+    /* text-shadow: 0 1px 0 #ffffff; */
+    line-height: 17px;
+    min-width: 80px;
+    text-align: center;
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 0px;
+    text-transform: capitalize;
+}
+
+.color-btn{
+    background-color: #000000;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.form {
+  display: block;
+}
+
+.dd {
+  padding: 10px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="form">
+  <div>
+<h3>Select Student and Exam Details to fetch the corresponding responses</h3  >
+  </div>
+  <div class="dd">
+    <label>Student</label>
+    <select name="students" id="student">
+      <option value="user1">User1</option>
+      <option value="user2">User2</option>
+      <option value="user3">User3</option>
+    </select>
+  </div>
+  
+  <div class="dd">
+    <label>Exam</label>
+    <select name="exams" id="exam">
+      <option value="gate2019">GATE 2019</option>
+      <option value="gate2020">GATE 2020</option>
+      <option value="gate2021">GATE 2021</option>
+    </select>
+  </div>
+  <a href="#" class="button color-btn" id="fetch-btn">Fetch</a>
+</div>
+
+<script src="fetch.js"></script>
+</body>
+</html>

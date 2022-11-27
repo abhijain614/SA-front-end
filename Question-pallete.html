@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+.privew {
+    margin-bottom: 20px;
+}
+.questionsBox {
+    display: block;
+    border: solid 1px #e3e3e3;
+    padding: 10px 20px 0px;
+    box-shadow: inset 0 0 30px rgba(000,000,000,0.1), inset 0 0 4px rgba(255,255,255,1);
+    border-radius: 3px;
+    margin: 0 10px;
+}.questions {
+    background: #007fbe;
+    color: #FFF;
+    font-size: 22px;
+    padding: 8px 30px;
+    font-weight: 300;
+    margin: 0 -30px 10px;
+    position: relative;
+}
+.questions:after {
+    background: url(../img/icon.png) no-repeat left 0;
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 9px;
+    height: 7px;
+    content: '.';
+    left: 0;
+    text-align: left;
+    font-size: 0;
+}
+.questions:after {
+    left: auto;
+    right: 0;
+    background-position: -10px 0;
+}
+.questions:before, .questions:after {
+    background: black;
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 9px;
+    height: 7px;
+    content: '.';
+    left: 0;
+    text-align: left;
+    font-size: 0;
+}
+.answerList {
+    margin-bottom: 15px;
+}
+
+
+ol, ul {
+    list-style: none;
+    
+}
+.answerList li:first-child {
+    border-top-width: 0;
+}
+
+li {
+    margin: 0.5rem;
+}
+
+.answerList li {
+    padding: 3px 0;
+}
+.answerList {
+    display: block;
+    padding: 6px;
+    border-radius: 6px;
+    border: solid 1px #dde7e8;
+    font-weight: 400;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+input[type=checkbox], input[type=radio] {
+    margin: 4px 0 0;
+    margin-top: 1px;
+    line-height: normal;
+}
+.questionsRow {
+    background: #dee3e6;
+    margin: 0 -20px;
+    padding: 10px 20px;
+    border-radius: 0 0 3px 3px;
+}
+.button, .greyButton {
+    background-color: #f2f2f2;
+    color: #888888;
+    display: inline-block;
+    border: solid 3px #cccccc;
+    vertical-align: middle;
+    /* text-shadow: 0 1px 0 #ffffff; */
+    line-height: 27px;
+    min-width: 160px;
+    text-align: center;
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 0px;
+    text-transform: capitalize;
+}
+.color-btn{
+    background-color: #000000;
+    color: #ffffff;
+}
+.questionsRow span {
+    float: right;
+    display: inline-block;
+    line-height: 30px;
+    border: solid 1px #aeb9c0;
+    padding: 0 10px;
+    background: #FFF;
+    color: #007fbe;
+}
+
+.options {
+    display:inline-flex;
+}
+
+.ghost {
+    display: none;
+}
+
+</style>
+</head>
+<body>
+    <div class="privew">
+        <div class="questionsBox">
+            <div class="questions" id="question_box">Which of the following is correct about data-keyboard Data attribute of Modal Plugin?</div>
+            <ul class="answerList">
+                <li>
+                    <div class="options">
+                        <input type="radio" name="answerGroup" value="opt1" id="answerGroup_0" class="answer">
+                    <label id="opt1">
+                         It specifies static for a backdrop, if you don't want the modal to be closed when the user clicks outside of the modal.</label>
+                    </div>
+        
+                </li>
+                <li>
+                    <div class="options">
+                        <input type="radio" name="answerGroup" value="opt2" id="answerGroup_1" class="answer">
+                    <label id="opt2">
+                         It specifies static for a backdrop, if you don't want the modal to be closed when the user clicks outside of the modal.</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="options">
+                        <input type="radio" name="answerGroup" value="opt3" id="answerGroup_2" class="answer">
+                    <label id="opt3">
+                         It specifies static for a backdrop, if you don't want the modal to be closed when the user clicks outside of the modal.</label>
+                    </div>
+        
+                </li>
+                <li>
+                    <div class="options">
+                        <input type="radio" name="answerGroup" value="opt4" id="answerGroup_3" class="answer">
+                    <label id="opt4">
+                         It specifies static for a backdrop, if you don't want the modal to be closed when the user clicks outside of the modal.</label>
+                    </div>
+        
+                </li>
+                <!-- <li>
+                    <label id="opt2">
+                        <input type="radio" name="answerGroup" value="1" id="answerGroup_1"> It closes the modal when escape key is pressed; set to false to disable.</label>
+                </li>
+                <li>
+                    <label id="opt3">
+                        <input type="radio" name="answerGroup" value="2" id="answerGroup_2"> It shows the modal when initialized.</label>
+                </li>
+                <li>
+                    <label id="opt4">
+                        <input type="radio" name="answerGroup" value="3" id="answerGroup_3"> Using the jQuery .load method, injects content into the modal body. If an href with a valid URL is added, it will load that content.</label>
+                </li> -->
+            </ul>
+            <div class="questionsRow"><a href="#" class="button color-btn" id="nextquestions">Next</a> <a href="#" class="button ghost color-btn" id="submit-paper">Submit</a><span id="qindex"></span></div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    <!-- <script src="server.js"></script>   -->
+</body>
+</html>
